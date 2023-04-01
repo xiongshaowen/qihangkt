@@ -1,0 +1,91 @@
+.search-title_bar{
+	height: 39px;
+	background: #031F8D;
+	margin-right:10px;
+	color: #fff; /*白色*/
+	line-height: 39px;
+	font-size: 16px;
+	padding-left: 20px;
+}
+
+#search-form{
+	margin-top: 10px;
+}
+#search-form > div > input {
+	width:160px;
+	padding-right:30px;
+}
+
+
+input,
+input:focus{
+	border: 1px #ccc solid !important;
+	box-shadow: none !important;
+	outline: none !important;
+}
+#search_btn{
+	margin-top: 15px;
+	padding-right: 10px;
+}
+
+#search_btn > button {
+	height: 30px;
+	line-height: 16px;
+	width: 85px;
+	margin-left: 6px;
+	background: #fff;
+	border: 1px #ccc solid;
+}
+
+#search_btn > button:hover{
+	background: #031F8D;
+	color: #fff;
+}
+
+#content_table{
+	margin-top: 15px;
+	padding-right:10px;
+}
+ 
+#content_table > div > table tr:first-child{
+	background: #031F8D;
+	color: #fff;
+}
+#content_table > div > table tr:first-child > td{
+	border: 1px #031F8D solid;
+}
+
+#pager{
+	padding-right: 10px;
+	margin-bottom: 20px;
+	
+}
+#pager > div > button{    /*也可用逗号形式写在上面的 #search_btn > button,后面，因这两个按钮组是一样的样式*/
+	height: 30px;
+	line-height: 16px;
+	width: 85px;
+	margin-left: 6px;
+	background: #fff;
+	border: 1px #ccc solid;
+}
+
+#pager > div > button:hover{  /*也可用逗号形式写在上面的 #search_btn > button:hover,后面，因这两个按钮组是一样的样式*/
+	background: #031F8D;
+	color: #fff;
+}
+
+#pager > p{
+	height: 30px;
+	line-height: 30px;
+	font-size:15px;
+}
+
+#pager > p > span{
+	font-weight: bolder;
+	color: 031F8D;
+	font-size: 16px;
+}
+.icon-rili{
+	color:blue;
+}
+

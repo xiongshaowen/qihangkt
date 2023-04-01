@@ -1,0 +1,78 @@
+
+
+/*轮播的样式*/
+#carousel-qhkt{
+	margin-top: -20px;
+}
+
+.carousel-inner > div.item{
+	/*height: 410px;*/
+	background-position:center center !important;              /*!important 加重权重，如没有，则显示图片有*/
+	background-size: covert !important;                        /*设置不同大小的背景图片全屏覆盖，如果直接设置大小会拉伸或挤压图片不好看*/
+}
+
+@media(min-width: 769px){                      
+	.carousel-inner > div{
+		height:410px !important;
+	}
+}
+
+@media(max-width: 768px){
+     .carousel-inner > div{
+		height:auto !imprtant;
+	}
+}
+
+/* 课程缩略图*/
+.page-header{
+	border-bottom: 4px #ddd solid;
+}
+#courseList > .page-header > h3{
+	position:relative;
+}
+
+#courseList > .page-header > h3 > a{
+	color:#666;
+	font-weight: 100;
+	font-size: 16px;
+	position:absolute;
+	right:0px;
+	line-height:20px;
+}
+
+#courseList > .page-header > h3 > a:hover{
+	text-decoration:none;                      /*超链接，鼠标悬停去下钱线*/
+}
+.thumbnail{
+
+	border:1px #fff solid;
+	padding:10px;
+	border-radius:0;                  /*去掉圆角让成为方角*/
+}
+.thumbnail:hover{
+	box-shadow:.5px .5px 1px #ddd;           /*.5表示0.5*/
+	border:1px #ccc solid;
+	outline: 1px #ccc solid;
+}
+.thumbnail > .caption > h3{
+	margin-top: 5px;
+	font-size:16px;
+
+}
+.thumbnail > .caption > h3 > a{
+	color:#333;
+}
+.thumbnail > .caption > h3.course_price{
+	position:relative;
+	margin-top:20px;
+	color:red;
+}
+
+.thumbnail > .caption > h3 > .course_others{
+	position:absolute;
+	text-decoration:none;
+	right:0;
+}
+
+
+

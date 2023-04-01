@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ybzy.qihangkt.dao.RoleDao">
+<!--RoleDao接口实现
+   因为RoleDao继承了BaseDao，所以这里也不用写BaseDao.xml中定义的功能代码，这里只写我们不常用的特有功能方法即可。
+  -->
+</mapper>

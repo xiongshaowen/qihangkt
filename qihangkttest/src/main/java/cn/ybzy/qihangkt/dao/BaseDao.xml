@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ybzy.qihangkt.dao.BaseDao">
+
+  <!--tableName它是表名，sql占位符传值不管用，要用$｛｝接收传来的值
+     open="(" separator="," close=")" 相当 于定格式(xx,xxx,xxx)
+     param相当于  (?,?,?,?..)
+     
+     #{}对应的是PreparedStatementd对象来执行sql语句
+     ${}对应的是Statement对象来执行sql语句  凡是原生的jdbc不能使用占位符的地方，就只能使用它
+     -->
+     
+     <!--这个添加方法，有局限性，只能是entity类的属性个数和表格的列数，他们是一个一对一的对应关系下才能使用
+	 * 但是其后又因想，复杂查关联查询等，增加了字段，即表格字段与增加用户的字段不配匹。会发生异常  -->
+     <insert id="add">
+         insert into ${tableName} values 
+         <foreach collection="objects" item="param" open="(" separator="," close=")">
+            #{param}
+         </foreach>
+     </insert>
+     
+     <!-- 这个增加方法，解决了上面的bug, -->
+     <insert id="addForNotMatch">
+        insert into ${tableName}
+          <foreach collection="fieldNames" item="param" open="(" separator="," close=")">
+            ${param}  <!-- #是类似mysql的占位符？，但这里是表名，不能用#。上面的也是一个道理 -->
+          </foreach>
+          values
+          <foreach collection="fieldVales" item="param" open="(" separator="," close=")">
+            #{param}
+          </foreach>
+     </insert>
+     
+     <delete id="delete">
+        delete from ${tableName} where id=#{id}
+     </delete>
+     
+     <!-- set要设置多字段，所以  -->
+     <update id="update">
+        update ${tableName}
+          <set>
+            <foreach collection="objects" item="param">
+               ${param},
+            </foreach>
+          </set>
+          where id=#{id}
+     </update>
+     
+     
+     <select id="select" resultType="map">
+        select *from ${tableName} where id=#{id}
+     </select>
+     
+     <select id="selectAll" resultType="map">
+        select *from ${tableName}
+     </select>
+</mapper>
