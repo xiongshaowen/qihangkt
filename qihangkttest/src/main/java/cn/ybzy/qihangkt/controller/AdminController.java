@@ -20,7 +20,7 @@ import cn.ybzy.qihangkt.web.AuthClass;
 import cn.ybzy.qihangkt.web.AuthMethod;
 @AuthClass   //这个注解就是标记，AdminController这个类是需要限才能访问的。
 @Controller
-//熊少文xiongshaowen
+//
 public class AdminController {
 	@Autowired
 	private RoleService roleService;
